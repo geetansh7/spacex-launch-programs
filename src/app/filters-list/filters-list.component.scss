@@ -1,0 +1,28 @@
+.filters__card__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filters__card__content:first-of-type{
+    height: 50vh;
+}
+.filters__card__button{
+    width: 40%;
+    background-color: lightgreen;
+}
+.filters__card__button_selected{
+    background-color: green;
+}
+::ng-deep .mat-card-header-text{
+    width: 100%;
+}
+.filters__card__subtitle{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.filters__card__content::after {
+    content: "";
+    width: 40%;
+}

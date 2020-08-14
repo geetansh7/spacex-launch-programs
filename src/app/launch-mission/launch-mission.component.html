@@ -1,0 +1,19 @@
+<mat-card class="mission__card">
+  <div class="mission__card__div">
+    <img mat-card-image [src]="launchMission.links.mission_patch_small" class="mission__card__image">
+  </div>  
+    <mat-card-header>
+      <mat-card-title>{{launchMission.mission_name}} # {{launchMission.flight_number}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Launch Year: {{launchMission.launch_year}}
+      </p>
+      <p>
+        Successful Launch: {{launchMission.launch_success}}
+      </p>
+      <p>
+        Successful Landing: {{launchMission.rocket.first_stage.cores[0].land_success? launchMission.rocket.first_stage.cores[0].land_success: false}}
+      </p>
+    </mat-card-content>
+  </mat-card>

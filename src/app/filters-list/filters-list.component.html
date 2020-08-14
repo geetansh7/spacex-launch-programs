@@ -1,0 +1,29 @@
+<mat-card class="filters__card">
+    <mat-card-header>
+      <mat-card-title>Filters</mat-card-title>
+      <mat-card-subtitle class="filters__card__subtitle">Launch Year</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="filters__card__content">
+      <button *ngFor="let year of launchYears" [ngClass]="filters.year === year? 'filters__card__button filters__card__button_selected': 'filters__card__button'" (click)="changeYearFilter(year)">
+          {{year}}
+      </button>
+    </mat-card-content>
+    <mat-card-subtitle class="filters__card__subtitle">Successful Launch</mat-card-subtitle>
+    <mat-card-content class="filters__card__content">
+        <button [ngClass]="filters.isLaunched === 'true'? 'filters__card__button filters__card__button_selected': 'filters__card__button'" (click)="changeLaunchFilter('true')">
+            Yes
+        </button>
+        <button [ngClass]="filters.isLaunched === 'false'? 'filters__card__button filters__card__button_selected': 'filters__card__button'" (click)="changeLaunchFilter('false')">
+            No
+        </button>
+      </mat-card-content>
+    <mat-card-subtitle class="filters__card__subtitle">Successful Landing</mat-card-subtitle>
+    <mat-card-content class="filters__card__content">
+        <button  [ngClass]="filters.isLanded === 'true'? 'filters__card__button filters__card__button_selected': 'filters__card__button'" (click)="changeLandFilter('true')">
+            Yes
+        </button>
+        <button  [ngClass]="filters.isLanded === 'false'? 'filters__card__button filters__card__button_selected': 'filters__card__button'" (click)="changeLandFilter('false')">
+            No
+        </button>
+      </mat-card-content>
+  </mat-card>

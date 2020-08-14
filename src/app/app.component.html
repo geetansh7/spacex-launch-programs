@@ -1,0 +1,13 @@
+<div class="body__main">
+  <h1 class="body__main__header">SpaceX Launch Programs</h1>
+  <div class="body__main__components">
+    <app-filters-list class="card__filter" (selectedFilter)="changeMissions($event)"></app-filters-list>
+    <div class="main__components__div">
+      <app-launch-mission class="card__mission" [launchMission]="launchMission" *ngFor="let launchMission of launchMissions"></app-launch-mission>
+    </div>
+    </div>
+    <footer>
+      <span><strong>Developed by:</strong></span>
+      <pre> <span>Geetansh Arora</span></pre>
+    </footer>
+</div>

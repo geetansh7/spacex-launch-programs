@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/spacex-launch-programs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
